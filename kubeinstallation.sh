@@ -9,6 +9,7 @@ firewall-cmd --permanent --add-port=6443/tcp
  firewall-cmd –reload
  modprobe br_netfilter
  echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables
+ yum install kubeadm docker -y 
  systemctl enable kubelet
  systemctl start kubelet
  systemctl enable docker
